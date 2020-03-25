@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <ImageView
+            android:layout_width="match_parent" android:layout_height="300dp"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.0" android:id="@+id/photo"
+               android:scaleType="centerCrop"
+  />
+
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+               android:src="@drawable/ic_heart1"
+               app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+               app:layout_constraintBottom_toBottomOf="@+id/photo" android:layout_marginTop="8dp"
+               app:layout_constraintTop_toTopOf="@+id/photo" app:layout_constraintVertical_bias="0.922"
+               android:id="@+id/imageViewLike"/>
+
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+               android:src="@drawable/ic_share"
+               app:layout_constraintStart_toEndOf="@+id/likesLayout" android:layout_marginStart="228dp"
+               app:layout_constraintTop_toBottomOf="@+id/imageViewLike" android:layout_marginTop="36dp"
+               app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:id="@+id/imageView2"
+               app:layout_constraintHorizontal_bias="0.875"/>
+
+    <LinearLayout
+            android:id="@+id/likesLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            android:layout_marginTop="60dp" app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/votesLayout"
+            app:layout_constraintHorizontal_bias="0.255" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.003">
+
+        <TextView
+                android:id="@+id/likesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@string/likes"
+                android:textSize="20sp"/>
+        <TextView
+                android:id="@+id/likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200"
+                android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/votesLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.003"
+            android:layout_marginEnd="72dp" app:layout_constraintEnd_toStartOf="@+id/viewsLayout">
+
+        <TextView
+                android:id="@+id/votesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@string/votes"
+                android:textSize="20sp"/>
+        <TextView
+                android:id="@+id/votes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200"
+                android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/viewsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:gravity="center" android:layout_marginTop="60dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" android:layout_marginEnd="68dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.003">
+
+        <TextView
+                android:id="@+id/viewsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@string/views"
+                android:textSize="20sp"/>
+
+        <TextView
+                android:id="@+id/views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200"
+                android:textSize="20sp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
