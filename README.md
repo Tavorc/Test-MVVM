@@ -1,5 +1,5 @@
 # Test-MVVM
-An example app that implement MVVM architechture, and implement infrastructure for networking.
+An example app that implements MVVM architechture, and implement infrastructure for networking.
 
 # Technologies:
 - Retrofit
